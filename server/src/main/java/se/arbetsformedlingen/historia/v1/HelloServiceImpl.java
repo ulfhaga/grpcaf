@@ -1,4 +1,4 @@
-package se.arbetsformedlingen.historia;
+package se.arbetsformedlingen.historia.v1;
 
 import com.baeldung.grpc.v1.HelloRequest;
 import com.baeldung.grpc.v1.HelloResponse;

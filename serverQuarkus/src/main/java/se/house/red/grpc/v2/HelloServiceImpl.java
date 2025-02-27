@@ -1,8 +1,8 @@
-package se.house.red.grpc;
+package se.house.red.grpc.v2;
 
-import com.baeldung.grpc.v1.HelloRequest;
-import com.baeldung.grpc.v1.HelloResponse;
-import com.baeldung.grpc.v1.HelloServiceGrpc;
+import com.baeldung.grpc.v2.HelloRequest;
+import com.baeldung.grpc.v2.HelloResponse;
+import com.baeldung.grpc.v2.HelloServiceGrpc;
 import io.grpc.stub.StreamObserver;
 
 public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
@@ -16,6 +16,8 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
                 .append(request.getFirstName())
                 .append(" ")
                 .append(request.getLastName())
+                .append(" ")
+                .append(request.getSex())
                 .toString();
 
         HelloResponse response = HelloResponse.newBuilder()

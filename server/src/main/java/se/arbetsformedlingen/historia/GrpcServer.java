@@ -10,7 +10,9 @@ public class GrpcServer {
         System.out.println("Starting simple gRPC server");
         Server server = ServerBuilder
                 .forPort(64001)
-                .addService(new HelloServiceImpl()).build();
+                .addService(new se.arbetsformedlingen.historia.v1.HelloServiceImpl())
+                .addService(new se.arbetsformedlingen.historia.v2.HelloServiceImpl())
+                .build();
         server.start();
         server.awaitTermination();
     }

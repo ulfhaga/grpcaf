@@ -12,7 +12,7 @@ public class StartupBean {
 
     @Startup
     void init() {
-        Server server = ServerBuilder.forPort(64001).addService(new HelloServiceImpl()).build();
+        Server server = ServerBuilder.forPort(64001).addService(new se.house.red.grpc.v1.HelloServiceImpl()).addService(new se.house.red.grpc.v2.HelloServiceImpl()).build();
         try {
             System.out.println("Starting gRPC server on Quarkus");
             server.start();
@@ -22,4 +22,5 @@ public class StartupBean {
             throw new RuntimeException(e);
         }
     }
+
 }
