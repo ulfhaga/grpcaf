@@ -14,7 +14,7 @@ public class GrpcServer {
         System.out.println("GrpcServer!");
 
         Server server = ServerBuilder
-                .forPort(8080)
+                .forPort(64001)
                 .addService(new HelloServiceImpl()).build();
 
         server.start();

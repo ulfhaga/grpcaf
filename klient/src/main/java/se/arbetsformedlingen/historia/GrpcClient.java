@@ -11,7 +11,7 @@ public class GrpcClient {
 
         System.out.println("GrpcClient!");
 
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 64001)
                 .usePlaintext()
                 .build();
 

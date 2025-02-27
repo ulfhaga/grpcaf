@@ -2,16 +2,31 @@
 
 A high performance, open source universal RPC framework.
 
+
 ## Build
 
-    mvn install -f kontrakt/pom.xml
-    mvn package -f klient/pom.xml
-    mvn package -f server/pom.xml
+JDK version is 17
 
-## RUN
+    mvnw.cmd install -f kontrakt/pom.xml
+    mvnw.cmd package -f klient/pom.xml
+    mvnw.cmd package -f server/pom.xml
+    mvnw.cmd package -Dquarkus.package.jar.type=uber-jar -DskipTests  -f serverQuarkus/pom.xml
+
+## Run gRPC server with simple server
 
     java -jar server/target/server-1.0-SNAPSHOT.jar
     java -jar klient/target/klient-1.0-SNAPSHOT.jar 
+
+## Run a gRPC server using Quarkus
+    
+    java -jar serverQuarkus/target/serverQuarkus-1.0.0-SNAPSHOT-runner.jar
+    java -jar klient/target/klient-1.0-SNAPSHOT.jar
+
+## Tips
+
+Kill server process i Linux
+
+    lsof -t -i:64001 | xargs kill -9
 
 ## Relevant Articles
 
