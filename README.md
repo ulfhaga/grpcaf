@@ -12,7 +12,7 @@ JDK version is 17
     mvnw.cmd package -f server/pom.xml
     mvnw.cmd package -Dquarkus.package.jar.type=uber-jar -DskipTests  -f serverQuarkus/pom.xml
 
-## Run gRPC server with simple server
+## Run gRPC server with a simple server
 
     java -jar server/target/server-1.0-SNAPSHOT.jar
     java -jar klient/target/klient-1.0-SNAPSHOT.jar 

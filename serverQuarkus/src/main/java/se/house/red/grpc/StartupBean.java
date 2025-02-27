@@ -14,6 +14,7 @@ public class StartupBean {
     void init() {
         Server server = ServerBuilder.forPort(64001).addService(new HelloServiceImpl()).build();
         try {
+            System.out.println("Starting gRPC server on Quarkus");
             server.start();
             server.awaitTermination();
         } catch (InterruptedException | IOException e) {

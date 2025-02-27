@@ -1,8 +1,8 @@
 package se.arbetsformedlingen.historia;
 
-import com.baeldung.grpc.HelloRequest;
-import com.baeldung.grpc.HelloResponse;
-import com.baeldung.grpc.HelloServiceGrpc;
+import com.baeldung.grpc.v1.HelloRequest;
+import com.baeldung.grpc.v1.HelloResponse;
+import com.baeldung.grpc.v1.HelloServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 

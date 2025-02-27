@@ -5,19 +5,13 @@ import io.grpc.ServerBuilder;
 
 import java.io.IOException;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class GrpcServer {
     public static void main(String[] args) throws IOException, InterruptedException {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("GrpcServer!");
-
+        System.out.println("Starting simple gRPC server");
         Server server = ServerBuilder
                 .forPort(64001)
                 .addService(new HelloServiceImpl()).build();
-
         server.start();
         server.awaitTermination();
-        }
+    }
 }
