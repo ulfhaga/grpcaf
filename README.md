@@ -34,14 +34,18 @@ JDK version is 17
 ## Run a gRPC server using Quarkus
     
     java -jar serverQuarkus/target/serverQuarkus-1.0.0-SNAPSHOT-runner.jar
+    # Open a new terminal
     java -jar klient/target/klient-1.0-SNAPSHOT.jar
     
 ## Run a Spring Boot server that make a gRPC call to a Spring Boot server gRPC server
 
 
    java -jar serverSpringBoot/target/serverSpringBoot-0.0.1-SNAPSHOT.jar
+   # Open a new terminal
    java -jar clientSpringBoot/target/clientSpringBoot-0.0.1-SNAPSHOT.jar
-    
+   
+   Open a browser and got to http://localhost:8080/start
+   
 
 ## Tips
 
