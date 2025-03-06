@@ -1,8 +1,8 @@
 # GRPC
 
 A high performance, open source universal RPC framework.
-
-JDK version is 17
+Testing with Spring Boot, Quarkus and just simple code.
+JDK version is 17.
 
 ## Build Windows
 
@@ -23,8 +23,6 @@ JDK version is 17
    ./mvnw clean package -f clientSpringBoot/pom.xml 
    ./mvnw clean package -f serverSpringBoot/pom.xml 
 
-    
-
 ## Run gRPC server with a simple server
 
     java -jar server/target/server-1.0-SNAPSHOT.jar
@@ -37,7 +35,7 @@ JDK version is 17
     # Open a new terminal
     java -jar klient/target/klient-1.0-SNAPSHOT.jar
     
-## Run a Spring Boot server that make a gRPC call to a Spring Boot server gRPC server
+## Run a Spring Boot server that make a gRPC call to a Spring Boot server
 
 
    java -jar serverSpringBoot/target/serverSpringBoot-0.0.1-SNAPSHOT.jar
